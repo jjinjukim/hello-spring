@@ -13,12 +13,14 @@ public class HelloController {
     @GetMapping("hello")
     public String hello(Model model) {
         model.addAttribute("data", "hello!!");
+        //logger.info("hello");
         return "hello";
     }
 
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name, Model mode) {
         mode.addAttribute("name", name);
+        //logger.info("hello-mvc");
         return "hello-template";
     }
 
